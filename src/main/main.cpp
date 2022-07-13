@@ -37,6 +37,7 @@ int main(int argc, char **argv)
 
     // init function
     init();
+    Player player(Vector2f(0, 0), window.loadTexture("media/img/player/player.png"));
 
     // main loop
     while (!quit)
@@ -57,9 +58,13 @@ int main(int argc, char **argv)
 
         // update game
         update();
+        player.update(state);
 
         // render game
         render();
+        window.color(0, 0, 0, 255);
+        window.drawBackground();
+        player.render(window);
 
         // update screen
         window.display();

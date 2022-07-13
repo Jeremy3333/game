@@ -6,6 +6,7 @@
 class Vector2f
 {
 public:
+    Vector2f();
     Vector2f(float p_x, float p_y);
     float x, y;
     void print()
