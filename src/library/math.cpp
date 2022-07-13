@@ -2,25 +2,21 @@
 #include <cmath>
 
 // include my libraries
-#include "Math.hpp"
+#include "library/Math.hpp"
 
-// init a Vector2f
-Vector2f initVector2f(double x, double y)
+Vector2f::Vector2f(float p_x, float p_y)
+    : x(p_x), y(p_y)
 {
-    Vector2f v;
-    v.x = x;
-    v.y = y;
-    return v;
 }
 
 Vector2f operator-(const Vector2f &lhs, const Vector2f &rhs)
 {
-    return initVector2f(lhs.x - rhs.x, lhs.y - rhs.y);
+    return Vector2f(lhs.x - rhs.x, lhs.y - rhs.y);
 }
 
 Vector2f operator+(const Vector2f &lhs, const Vector2f &rhs)
 {
-    return initVector2f(lhs.x + rhs.x, lhs.y + rhs.y);
+    return Vector2f(lhs.x + rhs.x, lhs.y + rhs.y);
 }
 
 Vector2f operator+=(Vector2f &lhs, const Vector2f &rhs)
@@ -32,17 +28,17 @@ Vector2f operator+=(Vector2f &lhs, const Vector2f &rhs)
 
 Vector2f operator/(const Vector2f &lhs, float rhs)
 {
-    return initVector2f(lhs.x / rhs, lhs.y / rhs);
+    return Vector2f(lhs.x / rhs, lhs.y / rhs);
 }
 
 Vector2f operator*(const Vector2f &lhs, float rhs)
 {
-    return initVector2f(lhs.x * rhs, lhs.y * rhs);
+    return Vector2f(lhs.x * rhs, lhs.y * rhs);
 }
 
 Vector2f operator*(float rhs, const Vector2f &lhs)
 {
-    return initVector2f(lhs.x * rhs, lhs.y * rhs);
+    return Vector2f(lhs.x * rhs, lhs.y * rhs);
 }
 
 // calculate the distance between two Vector2f

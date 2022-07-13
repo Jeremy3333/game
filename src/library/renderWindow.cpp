@@ -4,7 +4,7 @@
 #include <iostream>
 
 // include my libraries
-#include "RenderWindow.hpp"
+#include "library/RenderWindow.hpp"
 
 RenderWindow::RenderWindow(const char *p_title, int p_w, int p_h)
     : window(NULL), renderer(NULL), width(p_w), height(p_h)

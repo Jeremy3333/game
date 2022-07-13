@@ -3,8 +3,10 @@
 // include public libraries
 #include <iostream>
 
-struct Vector2f
+class Vector2f
 {
+public:
+    Vector2f(float p_x, float p_y);
     float x, y;
     void print()
     {
@@ -12,7 +14,6 @@ struct Vector2f
     }
 };
 
-Vector2f initVector2f(double x, double y);
 Vector2f operator-(const Vector2f &lhs, const Vector2f &rhs);
 Vector2f operator+(const Vector2f &lhs, const Vector2f &rhs);
 Vector2f operator+=(Vector2f &lhs, const Vector2f &rhs);
